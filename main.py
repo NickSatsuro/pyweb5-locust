@@ -2,6 +2,9 @@ import time
 import grpc
 from locust import User, HttpUser, task, between, constant, events
 
+import grpc.experimental.gevent
+grpc.experimental.gevent.init_gevent()
+
 import glossary_pb2 as pb2
 import glossary_pb2_grpc as pb2_grpc
 
